@@ -50,7 +50,7 @@
         }),
         methods: {
             async getInitialSections() {
-                const sections = await fetch('http://localhost:8081/sections.json');
+                const sections = await fetch('https://raw.githubusercontent.com/Jules0071/mvo/base-settup/sections.json');
                 console.log(sections);
             },
 
