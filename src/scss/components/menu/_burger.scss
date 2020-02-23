@@ -1,0 +1,17 @@
+.mv-burger {
+  display: block;
+  width: 42px;
+  cursor: pointer;
+
+  > span {
+    display: block;
+    height: 8px;
+    background-color: $white;
+    margin-bottom: 6px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+}

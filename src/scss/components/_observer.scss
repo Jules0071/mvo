@@ -1,0 +1,9 @@
+@import "../variables";
+
+.mv-observer {
+
+  &:nth-child(odd) {
+    background-color: $lightGrey;
+  }
+
+}

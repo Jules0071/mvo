@@ -1,5 +1,6 @@
 <template>
     <div id="app">
+        <mv-header></mv-header>
         <mv-section v-for="section in sections" :item="section" :key="section.id" @intersect="log"></mv-section>
        <!-- <ul>n
             <li class="list-item" v-for="item in items" :key="item.id">{{item.name}}</li>
@@ -11,19 +12,21 @@
 
     import Section from './components/Section';
     import Observer from './components/Observer';
+    import Header from './components/Header';
 
     export default {
         name: 'App',
         components: {
             'mv-section': Section,
             'mv-observer': Observer,
+            'mv-header': Header,
         },
         data: () => ({
             page: 1,
             items: [],
             sections: [
                 {
-                    id: 1,
+                    id: 1
                 },
                 {
                     id: 2
