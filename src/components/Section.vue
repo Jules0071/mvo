@@ -1,18 +1,20 @@
 <template>
-    <observer @intersect="intersect">
-        <section class="mv-section" ref="section">
-            <h1 :class="{'active': active}">{{ item.id }} as</h1>
-        </section>
-    </observer>
+    <mv-observer @intersect="intersect">
+        <mv-content :item="item"></mv-content>
+    </mv-observer>
 </template>
 
 <script>
 
     import Observer from "./Observer";
+    import Content from "./Content";
 
     export default {
         name: 'Section',
-        components: {Observer},
+        components: {
+            'mv-observer' : Observer,
+            'mv-content' : Content
+        },
         props: {
             item: {
                 type: Object

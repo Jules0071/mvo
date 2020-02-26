@@ -1,8 +1,5 @@
 <template>
-    <div class="observer" ref="observer">
-<!--
-        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
--->
+    <div class="mv-observer" ref="observer">
         <slot></slot>
     </div>
 </template>
