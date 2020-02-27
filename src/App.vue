@@ -32,20 +32,20 @@
         }),
         methods: {
             async getInitialSections() {
-                const sections = await fetch('https://raw.githubusercontent.com/Jules0071/mvo/c4924f64250916de61ad0ad20c5e2e4e4d28ff50/data/sections.json');
+                const sections = await fetch('https://raw.githubusercontent.com/Jules0071/mvo/master/data/sections.json');
                 this.sections = await sections.json();
                 console.log(this.sections)
             },
 
             async intersected() {
-                const res = await fetch(`https://raw.githubusercontent.com/Jules0071/mvo/c4924f64250916de61ad0ad20c5e2e4e4d28ff50/data/content-${
+                const res = await fetch(`https://raw.githubusercontent.com/Jules0071/mvo/master/data/content-${
                     this.page
                     }.json`);
 
                 this.page++;
                 console.log('intersected', this.page);
-                //const items = await res.json();
-                //this.items = [...this.items, ...items];
+                const items = await res.json();
+                this.items = [...this.items, ...items];
             },
             log(e) {
                 //console.log(e)

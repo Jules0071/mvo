@@ -1,32 +1,32 @@
 [
   {
-    "id": 1,
     "name" : "Über uns",
-    "href": "ueber-uns"
+    "id": "ueber-uns",
+    "data": []
   },
   {
-    "id": 2,
     "name" : "Jugend",
-    "href": "jugend"
+    "id": "jugend",
+    "data": []
   },
   {
-    "id": 3,
     "name" : "Termine",
-    "href": "termine"
+    "id": "termine",
+    "data": []
   },
   {
-    "id": 4,
     "name" : "Medien",
-    "href": "medien"
+    "id": "medien",
+    "data": []
   },
   {
-    "id": 5,
     "name" : "Kontakt",
-    "href": "kontakt"
+    "id": "kontakt",
+    "data": []
   },
   {
-    "id": 6,
     "name" : "Partner",
-    "href": "partner"
+    "id": "partner",
+    "data": []
   }
 ]

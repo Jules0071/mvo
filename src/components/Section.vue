@@ -1,5 +1,5 @@
 <template>
-    <mv-observer @intersect="intersect">
+    <mv-observer @intersect="intersect" :id="item.id">
         <mv-content :item="item"></mv-content>
     </mv-observer>
 </template>

@@ -2,7 +2,7 @@
     <nav>
         <ul>
             <li v-for="item of items" :key="item.name">
-                <a href="#">
+                <a :href="item.id">
                     <span>{{ item.name }}</span>
                 </a>
             </li>
