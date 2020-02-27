@@ -1,10 +1,12 @@
 <template>
     <div id="app">
-        <mv-header></mv-header>
+        <mv-header>
+            <mv-menu :items="sections"></mv-menu>
+        </mv-header>
         <mv-section v-for="section in sections" :item="section" :key="section.id" @intersect="intersected"></mv-section>
-       <!-- <ul>n
-            <li class="list-item" v-for="item in items" :key="item.id">{{item.name}}</li>
-        </ul>-->
+        <!-- <ul>n
+             <li class="list-item" v-for="item in items" :key="item.id">{{item.name}}</li>
+         </ul>-->
     </div>
 </template>
 
@@ -13,6 +15,7 @@
     import Section from './components/Section';
     import Observer from './components/Observer';
     import Header from './components/Header';
+    import Menu from './components/menu/Menu';
 
     export default {
         name: 'App',
@@ -20,42 +23,22 @@
             'mv-section': Section,
             'mv-observer': Observer,
             'mv-header': Header,
+            'mv-menu': Menu
         },
         data: () => ({
             page: 1,
             items: [],
-            sections: [
-                {
-                    id: 1
-                },
-                {
-                    id: 2
-                },
-                {
-                    id: 3
-                },
-                {
-                    id: 4
-                },
-                {
-                    id: 5
-                },
-                {
-                    id: 6
-                },
-                {
-                    id: 7
-                }
-            ],
+            sections: [],
         }),
         methods: {
             async getInitialSections() {
-                const sections = await fetch('https://raw.githubusercontent.com/Jules0071/mvo/base-settup/sections.json');
-
+                const sections = await fetch('https://raw.githubusercontent.com/Jules0071/mvo/c4924f64250916de61ad0ad20c5e2e4e4d28ff50/data/sections.json');
+                this.sections = await sections.json();
+                console.log(this.sections)
             },
 
             async intersected() {
-                const res = await fetch(`https://raw.githubusercontent.com/Jules0071/mvo/develop/data/content-${
+                const res = await fetch(`https://raw.githubusercontent.com/Jules0071/mvo/c4924f64250916de61ad0ad20c5e2e4e4d28ff50/data/content-${
                     this.page
                     }.json`);
 
@@ -70,7 +53,7 @@
         },
         mounted() {
             const myJSON = JSON.stringify(this.sections);
-          //  console.log(myJSON);
+            //  console.log(myJSON);
             this.getInitialSections();
         }
     }

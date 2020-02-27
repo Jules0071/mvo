@@ -1,6 +1,7 @@
 <template>
 
     <header class="mv-header">
+        <slot></slot>
         <mv-burger></mv-burger>
     </header>
 

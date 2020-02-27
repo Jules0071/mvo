@@ -1,26 +1,32 @@
 [
   {
     "id": 1,
-    "name" : "Über uns"
+    "name" : "Über uns",
+    "href": "ueber-uns"
   },
   {
     "id": 2,
-    "name" : "Jugend"
+    "name" : "Jugend",
+    "href": "jugend"
   },
   {
     "id": 3,
-    "name" : "Termine"
+    "name" : "Termine",
+    "href": "termine"
   },
   {
     "id": 4,
-    "name" : "Medien"
+    "name" : "Medien",
+    "href": "medien"
   },
   {
     "id": 5,
-    "name" : "Kontakt"
+    "name" : "Kontakt",
+    "href": "kontakt"
   },
   {
     "id": 6,
-    "name" : "Partner"
+    "name" : "Partner",
+    "href": "partner"
   }
 ]
