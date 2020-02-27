@@ -3,7 +3,7 @@
         <mv-header>
             <mv-menu :items="sections"></mv-menu>
         </mv-header>
-        <mv-section v-for="section in sections" :item="section" :key="section.id" @intersect="intersected"></mv-section>
+        <mv-section v-for="section in sections" :section="section" :key="section.id" @intersect="intersected"></mv-section>
         <!-- <ul>n
              <li class="list-item" v-for="item in items" :key="item.id">{{item.name}}</li>
          </ul>-->
@@ -27,14 +27,13 @@
         },
         data: () => ({
             page: 1,
-            items: [],
             sections: [],
         }),
         methods: {
             async getInitialSections() {
                 const sections = await fetch('https://raw.githubusercontent.com/Jules0071/mvo/master/data/sections.json');
                 this.sections = await sections.json();
-                console.log(this.sections)
+             //   console.log(this.sections)
             },
 
             async intersected() {
@@ -43,9 +42,11 @@
                     }.json`);
 
                 this.page++;
-                console.log('intersected', this.page);
-                const items = await res.json();
-                this.items = [...this.items, ...items];
+               // console.log('intersected', this.page);
+                const content = await res.json();
+                console.log(this.page-2)
+                this.sections[this.page-2].data.push(content);
+                console.log(this.sections)
             },
             log(e) {
                 //console.log(e)

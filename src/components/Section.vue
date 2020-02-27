@@ -1,6 +1,6 @@
 <template>
-    <mv-observer @intersect="intersect" :id="item.id">
-        <mv-content :item="item"></mv-content>
+    <mv-observer @intersect="intersect" :id="section.id">
+        <mv-content :section="section"></mv-content>
     </mv-observer>
 </template>
 
@@ -16,7 +16,7 @@
             'mv-content' : Content
         },
         props: {
-            item: {
+            section: {
                 type: Object
             }
         },
@@ -27,7 +27,7 @@
         },
         methods: {
             intersect() {
-                this.$emit("intersect", this.item.id);
+                this.$emit("intersect", this.section.id);
             }
         },
         mounted() {
@@ -42,9 +42,10 @@
 <style lang="scss">
 
     h1 {
-        opacity: 0;
-        transition: opacity 0.5s ease, transform 1s ease;
-        transform: translateX(-300px);
+        opacity: 1;
+        color: black;
+/*        transition: opacity 0.5s ease, transform 1s ease;
+        transform: translateX(-300px);*/
 
         &.active {
             opacity: 1;
