@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <mv-header></mv-header>
-        <mv-section v-for="section in sections" :item="section" :key="section.id" @intersect="log"></mv-section>
+        <mv-section v-for="section in sections" :item="section" :key="section.id" @intersect="intersected"></mv-section>
        <!-- <ul>n
             <li class="list-item" v-for="item in items" :key="item.id">{{item.name}}</li>
         </ul>-->
@@ -51,17 +51,18 @@
         methods: {
             async getInitialSections() {
                 const sections = await fetch('https://raw.githubusercontent.com/Jules0071/mvo/base-settup/sections.json');
-                console.log(sections);
+
             },
 
             async intersected() {
-                const res = await fetch(`https://jsonplaceholder.typicode.com/comments?_page=${
+                const res = await fetch(`https://raw.githubusercontent.com/Jules0071/mvo/develop/data/content-${
                     this.page
-                    }&_limit=1`);
+                    }.json`);
 
                 this.page++;
-                const items = await res.json();
-                this.items = [...this.items, ...items];
+                console.log('intersected', this.page);
+                //const items = await res.json();
+                //this.items = [...this.items, ...items];
             },
             log(e) {
                 //console.log(e)
