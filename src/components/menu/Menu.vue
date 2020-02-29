@@ -1,5 +1,5 @@
 <template>
-    <nav>
+    <nav class="mv-menu">
         <ul>
             <li v-for="item of items" :key="item.name">
                 <a :href="item.id">

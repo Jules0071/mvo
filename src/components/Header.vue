@@ -1,19 +1,19 @@
 <template>
 
     <header class="mv-header">
-        <slot></slot>
-        <mv-burger></mv-burger>
+        <slot name="menu"></slot>
+        <slot name="burger"></slot>
+      
     </header>
 
 </template>
 
 <script>
 
-    import Burger from './menu/Burger'
 
     export default {
         components: {
-            'mv-burger': Burger
+          
         },
     }
 

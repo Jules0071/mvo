@@ -1,0 +1,16 @@
+.mv-menu {
+    ul {
+        list-style: none;
+        li {display: inline-flex;
+            a {
+                display: inline-flex;
+                padding: 5px 20px;
+                color: $white;
+                text-decoration: none;
+                > span {
+
+                }
+            }
+        }
+    }
+}

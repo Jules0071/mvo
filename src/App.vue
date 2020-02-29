@@ -1,12 +1,10 @@
 <template>
     <div id="app">
         <mv-header>
-            <mv-menu :items="sections"></mv-menu>
+            <mv-menu slot="menu" :items="sections"></mv-menu>
+            <mv-burger slot="burger"></mv-burger>
         </mv-header>
         <mv-section v-for="section in sections" :section="section" :key="section.id" @intersect="intersected"></mv-section>
-        <!-- <ul>n
-             <li class="list-item" v-for="item in items" :key="item.id">{{item.name}}</li>
-         </ul>-->
     </div>
 </template>
 
@@ -16,14 +14,16 @@
     import Observer from './components/Observer';
     import Header from './components/Header';
     import Menu from './components/menu/Menu';
-
+    import Burger from './components/menu/Burger'
+    
     export default {
         name: 'App',
         components: {
             'mv-section': Section,
             'mv-observer': Observer,
             'mv-header': Header,
-            'mv-menu': Menu
+            'mv-menu': Menu,
+            'mv-burger': Burger
         },
         data: () => ({
             page: 1,
