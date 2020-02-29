@@ -2,7 +2,7 @@
     <div id="app">
         <mv-header>
             <mv-menu slot="menu" :items="sections"></mv-menu>
-            <mv-burger slot="burger"></mv-burger>
+          <!--  <mv-burger slot="burger"></mv-burger>-->
         </mv-header>
         <mv-section v-for="section in sections" :section="section" :key="section.id" @intersect="intersected"></mv-section>
     </div>
@@ -15,7 +15,7 @@
     import Header from './components/Header';
     import Menu from './components/menu/Menu';
     import Burger from './components/menu/Burger'
-    
+
     export default {
         name: 'App',
         components: {

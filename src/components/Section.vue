@@ -44,8 +44,8 @@
     h1 {
         opacity: 1;
         color: black;
-/*        transition: opacity 0.5s ease, transform 1s ease;
-        transform: translateX(-300px);*/
+    /*        transition: opacity 0.5s ease, transform 1s ease;
+            transform: translateX(-300px);*/
 
         &.active {
             opacity: 1;

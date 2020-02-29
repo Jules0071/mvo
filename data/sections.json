@@ -2,7 +2,29 @@
   {
     "name" : "Über uns",
     "id": "ueber-uns",
-    "data": []
+    "data": [],
+    "children": [
+      {
+        "name" : "Team",
+        "id": "team",
+        "data": []
+      },
+      {
+        "name" : "Orchester",
+        "id": "orchester",
+        "data": []
+      },
+      {
+        "name" : "Aktuelles",
+        "id": "aktuelles",
+        "data": []
+      },
+      {
+        "name" : "Geschichte",
+        "id": "geschichte",
+        "data": []
+      }
+    ]
   },
   {
     "name" : "Jugend",
