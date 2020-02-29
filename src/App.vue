@@ -26,7 +26,7 @@
             'mv-burger': Burger
         },
         data: () => ({
-            page: 1,
+            page: 0,
             sections: [],
         }),
         methods: {

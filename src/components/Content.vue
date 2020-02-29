@@ -1,6 +1,9 @@
 <template>
     <section class="mv-content">
-        <h1>{{ name }}</h1>
+        <template v-if="section.data.length">
+            <h1>{{ section.data[0].name }}</h1>
+            <p>{{ section.data[0].content.text }}</p>
+        </template>
     </section>
 </template>
 
@@ -13,13 +16,6 @@
             active: {
                 type: Boolean,
                 default: false
-            }
-        },
-        computed: {
-            name() {
-                if(this.section.data.length > 0) {
-                    return this.section.data[0].name;
-                }
             }
         },
         mounted() {
