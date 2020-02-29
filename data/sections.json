@@ -2,26 +2,37 @@
   {
     "name" : "Über uns",
     "id": "ueber-uns",
+    "full-height": false,
     "data": [],
     "children": [
       {
+        "name" : "",
+        "id": "intro",
+        "full-height": false,
+        "data": []
+      },
+      {
         "name" : "Team",
         "id": "team",
+        "full-height": false,
         "data": []
       },
       {
         "name" : "Orchester",
         "id": "orchester",
+        "full-height": false,
         "data": []
       },
       {
         "name" : "Aktuelles",
         "id": "aktuelles",
+        "full-height": false,
         "data": []
       },
       {
         "name" : "Geschichte",
         "id": "geschichte",
+        "full-height": false,
         "data": []
       }
     ]
@@ -29,26 +40,31 @@
   {
     "name" : "Jugend",
     "id": "jugend",
+    "full-height": false,
     "data": []
   },
   {
     "name" : "Termine",
     "id": "termine",
+    "full-height": false,
     "data": []
   },
   {
     "name" : "Medien",
     "id": "medien",
+    "full-height": false,
     "data": []
   },
   {
     "name" : "Kontakt",
     "id": "kontakt",
+    "full-height": false,
     "data": []
   },
   {
     "name" : "Partner",
     "id": "partner",
+    "full-height": false,
     "data": []
   }
 ]

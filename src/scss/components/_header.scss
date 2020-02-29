@@ -6,15 +6,16 @@
   min-height: 20px;
   background-color: $petrol;
   color: $white;
-  padding: $spacer * 1.5 $spacer;
+  padding: 0 $spacer;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 2;
 
-  .mv-burger {
+  .mv-burger,
+  .mv-menu {
     margin-left: auto;
-    margin-right: 20px;
+    margin-right: 25px;
   }
 
 }
