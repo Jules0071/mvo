@@ -2,37 +2,37 @@
   {
     "name" : "Über uns",
     "id": "ueber-uns",
-    "full-height": false,
+    "fullHeight": false,
     "data": [],
     "children": [
       {
         "name" : "",
         "id": "intro",
-        "full-height": true,
+        "fullHeight": true,
         "data": []
       },
       {
         "name" : "Team",
         "id": "team",
-        "full-height": false,
+        "fullHeight": false,
         "data": []
       },
       {
         "name" : "Orchester",
         "id": "orchester",
-        "full-height": false,
+        "fullHeight": false,
         "data": []
       },
       {
         "name" : "Aktuelles",
         "id": "aktuelles",
-        "full-height": false,
+        "fullHeight": false,
         "data": []
       },
       {
         "name" : "Geschichte",
         "id": "geschichte",
-        "full-height": false,
+        "fullHeight": false,
         "data": []
       }
     ]
@@ -40,31 +40,31 @@
   {
     "name" : "Jugend",
     "id": "jugend",
-    "full-height": false,
+    "fullHeight": false,
     "data": []
   },
   {
     "name" : "Termine",
     "id": "termine",
-    "full-height": false,
+    "fullHeight": false,
     "data": []
   },
   {
     "name" : "Medien",
     "id": "medien",
-    "full-height": false,
+    "fullHeight": false,
     "data": []
   },
   {
     "name" : "Kontakt",
     "id": "kontakt",
-    "full-height": false,
+    "fullHeight": false,
     "data": []
   },
   {
     "name" : "Partner",
     "id": "partner",
-    "full-height": false,
+    "fullHeight": false,
     "data": []
   }
 ]

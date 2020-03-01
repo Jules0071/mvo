@@ -4,7 +4,7 @@
             <mv-menu slot="menu" :items="sections"></mv-menu>
           <!--  <mv-burger slot="burger"></mv-burger>-->
         </mv-header>
-        <mv-section v-for="section in sections" :section="section" :key="section.id" @intersect="intersected"></mv-section>
+        <mv-section v-for="section in sections[0].children" :section="section" :key="section.id" @intersect="intersected"></mv-section>
     </div>
 </template>
 
@@ -45,8 +45,8 @@
                // console.log('intersected', this.page);
                 const content = await res.json();
                 console.log(this.page-2)
-                this.sections[this.page-2].data.children.push(content);
-                console.log(this.sections)
+                this.sections[0].children[this.page-2].data.push(content);
+                console.log(this.sections[0].children[this.page-2])
             },
             log(e) {
                 //console.log(e)

@@ -1,8 +1,14 @@
 .mv-content {
-  min-height: 120vh;
+  min-height: 50vh;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   &.full-height {
     min-height: 100vh;
+  }
+
+  @media (min-width: 992px) {
+    padding: 70px 0;
   }
 
 }
