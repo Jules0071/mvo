@@ -16,28 +16,28 @@
         "name" : "Team",
         "id": "team",
         "fullHeight": false,
-        "backgroundImage": "background/intro.jpg",
+        "backgroundImage": "",
         "data": []
       },
       {
         "name" : "Orchester",
         "id": "orchester",
         "fullHeight": false,
-        "backgroundImage": "background/intro.jpg",
+        "backgroundImage": "",
         "data": []
       },
       {
         "name" : "Aktuelles",
         "id": "aktuelles",
         "fullHeight": false,
-        "backgroundImage": "background/intro.jpg",
+        "backgroundImage": "",
         "data": []
       },
       {
         "name" : "Geschichte",
         "id": "geschichte",
         "fullHeight": false,
-        "backgroundImage": "background/intro.jpg",
+        "backgroundImage": "",
         "data": []
       }
     ]
