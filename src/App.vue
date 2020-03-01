@@ -45,7 +45,7 @@
                // console.log('intersected', this.page);
                 const content = await res.json();
                 console.log(this.page-2)
-                this.sections[this.page-2].data.push(content);
+                this.sections[this.page-2].data.children.push(content);
                 console.log(this.sections)
             },
             log(e) {

@@ -1,5 +1,5 @@
 <template>
-    <section class="mv-content">
+    <section class="mv-content" style="background-image:url(@/assets/background/intro.jpg')">
         <template v-if="section.data.length">
             <h1>{{ section.data[0].name }}</h1>
             <p>{{ section.data[0].content.text }}</p>

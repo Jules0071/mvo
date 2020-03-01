@@ -8,7 +8,7 @@
       {
         "name" : "",
         "id": "intro",
-        "full-height": false,
+        "full-height": true,
         "data": []
       },
       {
