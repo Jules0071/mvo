@@ -1,5 +1,6 @@
 <template>
-    <section class="mv-content" :class="{'full-height': section.fullHeight}" style="background-image:url('./static/background/intro.jpg')">
+    <section class="mv-content" :class="{'full-height': section.fullHeight}"
+             :style="backgroundImage">
         <article class="mv-content--inner mv-container">
             <template v-if="section.data.length">
                 <header class="mv-content--header">
@@ -30,6 +31,13 @@
             active: {
                 type: Boolean,
                 default: false
+            }
+        },
+        computed: {
+            backgroundImage() {
+                if(this.section.backgroundImage) {
+                    return `background-image: url('./static/${this.section.backgroundImage}')`;
+                }
             }
         },
         mounted() {

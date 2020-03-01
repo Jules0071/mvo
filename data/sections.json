@@ -9,6 +9,7 @@
         "name" : "",
         "id": "intro",
         "fullHeight": true,
+        "backgroundImage": "background/intro.jpg",
         "data": []
       },
       {
