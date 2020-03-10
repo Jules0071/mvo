@@ -1,21 +1,53 @@
 @import "../variables";
 
 .mv-header {
-  display: flex;
-  width: 100%;
-  min-height: 20px;
+  width: 100vw;
   background-color: $petrol;
-  color: $white;
-  padding: 0 $spacer;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 2;
 
-  .mv-burger,
+  &--inner {
+    width: 100%;
+    display: flex;
+    min-height: 60px;
+    color: $white;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &--logo {
+    flex: 0;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+  }
+
   .mv-menu {
-    margin-left: auto;
-    margin-right: 25px;
+    display: none;
+    @media (min-width: 992px) {
+      display: inline-flex;
+    }
+  }
+
+  .mv-burger {
+    margin-right: 20px;
+
+    @media (min-width: 992px) {
+      display: none;
+    }
+
+  }
+
+  .mv-logo {
+    width: 160px;
+    height: 142px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
   }
 
 }

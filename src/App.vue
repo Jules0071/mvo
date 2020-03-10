@@ -1,8 +1,11 @@
 <template>
     <div id="app">
+        <mv-offcanvas :active="menu">
+            <mv-burger slot="header" @click.native="closeMenu"></mv-burger>
+        </mv-offcanvas>
         <mv-header>
             <mv-menu slot="menu" :items="sections"></mv-menu>
-          <!--  <mv-burger slot="burger"></mv-burger>-->
+            <mv-burger slot="burger" @click.native="openMenu"></mv-burger>
         </mv-header>
         <mv-section v-for="section in sections[0].children" :section="section" :key="section.id" @intersect="intersected"></mv-section>
     </div>
@@ -13,6 +16,7 @@
     import Section from './components/Section';
     import Observer from './components/Observer';
     import Header from './components/Header';
+    import Offcanvas from './components/menu/Offcanvas';
     import Menu from './components/menu/Menu';
     import Burger from './components/menu/Burger'
 
@@ -23,11 +27,13 @@
             'mv-observer': Observer,
             'mv-header': Header,
             'mv-menu': Menu,
-            'mv-burger': Burger
+            'mv-burger': Burger,
+            'mv-offcanvas': Offcanvas,
         },
         data: () => ({
             page: 1,
             sections: [],
+            menu: false
         }),
         methods: {
             async getInitialSections() {
@@ -44,12 +50,18 @@
                 this.page++;
                // console.log('intersected', this.page);
                 const content = await res.json();
-                console.log(this.page-2)
+                console.log(this.page-2);
                 this.sections[0].children[this.page-2].data.push(content);
-                console.log(this.sections[0].children[this.page-2])
+                //console.log(this.sections[0].children[this.page-2])
             },
             log(e) {
                 //console.log(e)
+            },
+            openMenu() {
+                this.menu = true;
+            },
+            closeMenu() {
+                this.menu = false;
             }
         },
         mounted() {

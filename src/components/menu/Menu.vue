@@ -6,11 +6,13 @@
                     <span>{{ item.name }}</span>
                 </a>
                 <ul class="mv-menu--dropdown" v-if="item.children">
-                    <li v-for="i of item.children" :key="i.name">
-                        <a :href="i.id">
-                            <span>{{ i.name }}</span>
-                        </a>
-                    </li>
+                    <template v-for="i of item.children">
+                        <li v-if="i.name" :key="i.name">
+                            <a :href="i.id">
+                                <span>{{ i.name }}</span>
+                            </a>
+                        </li>
+                    </template>
                 </ul>
             </li>
 
